@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مستعمرة الفضاء الافتراضية - المشاركة المجتمعية</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Community Engagement Page Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #1b263b;
+            color: #ffffff;
+            direction: rtl;
+        }
+        .community-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px;
+        }
+        .community-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .community-header h2 {
+            font-size: 2.5rem;
+        }
+        .nav {
+            background-color: #243b55;
+            padding: 15px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .nav a {
+            color: #e63946;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        .nav a:hover {
+            color: #ffffff;
+        }
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            justify-items: center;
+            width: 100%;
+            max-width: 1200px;
+        }
+        .event {
+            background-color: #243b55;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            max-width: 300px;
+        }
+        .event:hover {
+            transform: translateY(-10px);
+        }
+        .event img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .event h3 {
+            font-size: 1.8rem;
+            color: #e63946;
+            margin-bottom: 10px;
+        }
+        .event p {
+            font-size: 1rem;
+            color: #b0bec5;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Links -->
+    <nav class="nav">
+        <a href="space_passport_page.html">جواز الفضاء</a>
+        <a href="colony_exploration_page.html">استكشاف المستعمرة</a>
+        <a href="achievements_badges_page.html">الإنجازات والأوسمة</a>
+        <a href="Interactive_Quiz.html">الاختبار التفاعلي</a>
+        <a href="Community_Engagement.html">المشاركة المجتمعية</a>
+    </nav>
+    
+    <!-- Community Engagement Page -->
+    <div class="community-container">
+        <div class="community-header">
+            <h2>المشاركة المجتمعية</h2>
+            <p>انضم إلى فعاليات وأنشطة المستعمرة وتواصل مع الآخرين لتكون جزءًا من مجتمع مستعمرة الفضاء.</p>
+        </div>
+        <div class="events-grid">
+            <!-- Event 1 -->
+            <div class="event" onclick="joinEvent('ورشة بناء الروبوتات')">
+                <img src="assets/robotics_workshop.jpg" alt="ورشة بناء الروبوتات">
+                <h3>ورشة بناء الروبوتات</h3>
+                <p>شارك في ورشة عمل ممتعة حول بناء الروبوتات والتعرف على تكنولوجيا المستقبل.</p>
+            </div>
+            <!-- Event 2 -->
+            <div class="event" onclick="joinEvent('المحاضرة العلمية')">
+                <img src="assets/science_lecture.jpg" alt="المحاضرة العلمية">
+                <h3>المحاضرة العلمية</h3>
+                <p>استمع إلى محاضرة شيقة من أحد العلماء حول أسرار الكون واستكشاف الفضاء.</p>
+            </div>
+            <!-- Event 3 -->
+            <div class="event" onclick="joinEvent('التجمع الاجتماعي')">
+                <img src="assets/social_gathering.jpg" alt="التجمع الاجتماعي">
+                <h3>التجمع الاجتماعي</h3>
+                <p>تعرف على المستوطنين الآخرين من خلال التجمعات الاجتماعية والأنشطة الترفيهية.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function joinEvent(eventName) {
+            alert(`لقد انضممت إلى ${eventName}. نتطلع لرؤيتك هناك!`);
+        }
+    </script>
+</body>
+</html>

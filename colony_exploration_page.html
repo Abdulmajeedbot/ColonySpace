@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مستعمرة الفضاء الافتراضية - استكشاف المستعمرة</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Colony Exploration Page Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #1b263b;
+            color: #ffffff;
+            direction: rtl;
+        }
+        .exploration-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px;
+        }
+        .exploration-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .exploration-header h2 {
+            font-size: 2.5rem;
+        }
+        .exploration-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 60px;
+            margin-top: 20px;
+            justify-items: center;
+            width: 100%;
+            max-width: 1200px;
+        }
+        .exploration-area {
+            background-color: #243b55;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            max-width: 300px;
+        }
+        .exploration-area:hover {
+            transform: translateY(-10px);
+        }
+        .exploration-area img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .exploration-area h3 {
+            font-size: 1.8rem;
+            color: #e63946;
+            margin-bottom: 10px;
+        }
+        .exploration-area p {
+            font-size: 1rem;
+            color: #b0bec5;
+        }
+    </style>
+</head>
+<body>
+    <!-- Colony Exploration Page -->
+    <div class="exploration-container">
+        <div class="exploration-header">
+            <h2>استكشاف مستعمرة الفضاء</h2>
+            <p>اكتشف مختلف أجزاء المستعمرة وتعرف على كيفية المساهمة في المجتمع.</p>
+        </div>
+        <div class="exploration-grid">
+            <!-- Living Quarters Area -->
+            <div class="exploration-area" onclick="exploreArea('أماكن المعيشة')">
+                <img src="assets/living_quarters.png" alt="أماكن المعيشة">
+                <h3>أماكن المعيشة</h3>
+                <p>استكشف أماكن المعيشة وتعرف على نمط حياة سكان المستعمرة الفضائية.</p>
+            </div>
+            <!-- Research Lab Area -->
+            <div class="exploration-area" onclick="exploreArea('المختبرات البحثية')">
+                <img src="assets/research_lab.png" alt="المختبرات البحثية">
+                <h3>المختبرات البحثية</h3>
+                <p>قم بزيارة المختبرات البحثية وتعرف على كيفية تقدم العلوم والتكنولوجيا في المستعمرة.</p>
+            </div>
+            <!-- Community Hub Area -->
+            <div class="exploration-area" onclick="exploreArea('المركز الاجتماعي')">
+                <img src="assets/community_hub.png" alt="المركز الاجتماعي">
+                <h3>المركز الاجتماعي</h3>
+                <p>تفاعل مع المستوطنين الآخرين في المركز الاجتماعي، وهو مكان للأنشطة والفعاليات.</p>
+            </div>
+            <!-- Agriculture Dome Area -->
+            <div class="exploration-area" onclick="exploreArea('قبة الزراعة')">
+                <img src="assets/agriculture_dome.png" alt="قبة الزراعة">
+                <h3>قبة الزراعة</h3>
+                <p>استكشف قبة الزراعة وتعرف على كيفية زراعة الغذاء بشكل مستدام داخل المستعمرة.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function exploreArea(areaName) {
+            alert(`مرحبًا بك في ${areaName}! هذه المنطقة قيد التطوير، ترقب المزيد من التحديثات.`);
+        }
+    </script>
+</body>
+</html>

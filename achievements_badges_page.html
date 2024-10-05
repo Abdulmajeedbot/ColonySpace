@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مستعمرة الفضاء الافتراضية - الإنجازات والأوسمة</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Achievements & Badges Page Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #1b263b;
+            color: #ffffff;
+            direction: rtl;
+        }
+        .achievements-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px;
+        }
+        .achievements-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .achievements-header h2 {
+            font-size: 2.5rem;
+        }
+        .badges-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            justify-items: center;
+            width: 100%;
+            max-width: 1200px;
+        }
+        .badge {
+            background-color: #243b55;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            max-width: 300px;
+        }
+        .badge:hover {
+            transform: translateY(-10px);
+        }
+        .badge img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .badge h3 {
+            font-size: 1.8rem;
+            color: #e63946;
+            margin-bottom: 10px;
+        }
+        .badge p {
+            font-size: 1rem;
+            color: #b0bec5;
+        }
+    </style>
+</head>
+<body>
+    <!-- Achievements & Badges Page -->
+    <div class="achievements-container">
+        <div class="achievements-header">
+            <h2>إنجازاتك وأوسمتك</h2>
+            <p>تتبع تقدمك واحصل على الأوسمة كلما أكملت المهام وساهمت في مستعمرة الفضاء.</p>
+        </div>
+        <div class="badges-grid">
+            <!-- Badge 1 -->
+            <div class="badge" onclick="showBadgeDetails('وسام المستكشف', 'حصلت عليه لاستكشاف جميع مناطق المستعمرة.')">
+                <img src="assets/badge_explorer.jpg" alt="وسام المستكشف">
+                <h3>وسام المستكشف</h3>
+                <p>حصلت عليه لاستكشاف جميع مناطق المستعمرة.</p>
+            </div>
+            <!-- Badge 2 -->
+            <div class="badge" onclick="showBadgeDetails('وسام العالم', 'حصلت عليه للمساهمة في الأبحاث في مختبرات المستعمرة.')">
+                <img src="assets/badge_scientist.jpg" alt="وسام العالم">
+                <h3>وسام العالم</h3>
+                <p>حصلت عليه للمساهمة في الأبحاث في مختبرات المستعمرة.</p>
+            </div>
+            <!-- Badge 3 -->
+            <div class="badge" onclick="showBadgeDetails('وسام البنّاء', 'حصلت عليه للمساعدة في بناء وتحسين البنية التحتية للمستعمرة.')">
+                <img src="assets/badge_builder.jpg" alt="وسام البنّاء">
+                <h3>وسام البنّاء</h3>
+                <p>حصلت عليه للمساعدة في بناء وتحسين البنية التحتية للمستعمرة.</p>
+            </div>
+            <!-- Badge 4 -->
+            <div class="badge" onclick="showBadgeDetails('وسام المجتمع', 'حصلت عليه للمشاركة في الأنشطة والفعاليات المجتمعية.')">
+                <img src="assets/badge_community.jpg" alt="وسام المجتمع">
+                <h3>وسام المجتمع</h3>
+                <p>حصلت عليه للمشاركة في الأنشطة والفعاليات المجتمعية.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Badge Details -->
+    <div id="badgeModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3 id="modalBadgeTitle"></h3>
+            <p id="modalBadgeDescription"></p>
+        </div>
+    </div>
+
+    <script>
+        function showBadgeDetails(badgeName, badgeDescription) {
+            document.getElementById('modalBadgeTitle').textContent = badgeName;
+            document.getElementById('modalBadgeDescription').textContent = badgeDescription;
+            document.getElementById('badgeModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('badgeModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('badgeModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مستعمرة الفضاء الافتراضية - الصفحة الرئيسية</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Homepage Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #1b263b;
+            color: #ffffff;
+            direction: rtl;
+        }
+        .homepage-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px;
+        }
+        .homepage-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .homepage-header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .nav {
+            background-color: #243b55;
+            padding: 15px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .nav a {
+            color: #e63946;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        .nav a:hover {
+            color: #ffffff;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            justify-items: center;
+            width: 100%;
+            max-width: 1200px;
+        }
+        .feature {
+            background-color: #243b55;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            max-width: 300px;
+        }
+        .feature img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .feature h3 {
+            font-size: 1.8rem;
+            color: #e63946;
+            margin-bottom: 10px;
+        }
+        .feature p {
+            font-size: 1rem;
+            color: #b0bec5;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Links -->
+    <nav class="nav">
+        <a href="space_passport_page.html">جواز الفضاء</a>
+        <a href="colony_exploration_page.html">استكشاف المستعمرة</a>
+        <a href="achievements_badges_page.html">الإنجازات والأوسمة</a>
+        <a href="interactive_quiz_page.html">الاختبار التفاعلي</a>
+        <a href="community_engagement_page.html">المشاركة المجتمعية</a>
+    </nav>
+    
+    <!-- Homepage Content -->
+    <div class="homepage-container">
+        <div class="homepage-header">
+            <h1>مرحبًا بكم في مستعمرة الفضاء الافتراضية</h1>
+            <p>ابدأ رحلتك في استكشاف الكون وانضم إلى مجتمع المستعمرين لبناء مستقبل أفضل.</p>
+        </div>
+        <div class="features-grid">
+            <!-- Feature 1 -->
+            <div class="feature" onclick="navigateTo('space_passport_page.html')">
+                <img src="assets/space_passport.jpg" alt="جواز الفضاء">
+                <h3>جواز الفضاء</h3>
+                <p>أنشئ جواز سفرك الفضائي واختر المستعمرة والكوكب والفريق الذي تنتمي إليه.</p>
+            </div>
+            <!-- Feature 2 -->
+            <div class="feature" onclick="navigateTo('colony_exploration_page.html')">
+                <img src="assets/colony_exploration.jpg" alt="استكشاف المستعمرة">
+                <h3>استكشاف المستعمرة</h3>
+                <p>خذ جولة افتراضية في المستعمرة الفضائية وتعرف على الحياة فيها.</p>
+            </div>
+            <!-- Feature 3 -->
+            <div class="feature" onclick="navigateTo('achievements_badges_page.html')">
+                <img src="assets/achievements.jpg" alt="الإنجازات والأوسمة">
+                <h3>الإنجازات والأوسمة</h3>
+                <p>تتبع تقدمك واحصل على الأوسمة كلما أكملت المهام وساهمت في المستعمرة.</p>
+            </div>
+            <!-- Feature 4 -->
+            <div class="feature" onclick="navigateTo('interactive_quiz_page.html')">
+                <img src="assets/interactive_quiz.jpg" alt="الاختبار التفاعلي">
+                <h3>الاختبار التفاعلي</h3>
+                <p>اختبر معلوماتك عن الفضاء والمستعمرة من خلال الاختبارات التفاعلية.</p>
+            </div>
+            <!-- Feature 5 -->
+            <div class="feature" onclick="navigateTo('community_engagement_page.html')">
+                <img src="assets/community_engagement.jpg" alt="المشاركة المجتمعية">
+                <h3>المشاركة المجتمعية</h3>
+                <p>انضم إلى الفعاليات والأنشطة المجتمعية وتواصل مع المستعمرين الآخرين.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Space Colony - User Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* User Dashboard Page Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #1b263b;
+            color: #ffffff;
+        }
+        .dashboard-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px;
+        }
+        .dashboard-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .dashboard-header h2 {
+            font-size: 2.5rem;
+        }
+        .dashboard-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+        .dashboard-option {
+            background-color: #243b55;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+            width: 300px;
+            cursor: pointer;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .dashboard-option:hover {
+            transform: translateY(-10px);
+        }
+        .dashboard-option h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #e63946;
+        }
+        .dashboard-option p {
+            font-size: 1rem;
+            color: #b0bec5;
+        }
+        .dashboard-option img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.2;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .dashboard-option:hover img {
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <!-- User Dashboard Page -->
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <h2>Welcome to Your Dashboard, [User Name]!</h2>
+            <p>Manage your journey, explore the colony, and track your progress.</p>
+        </div>
+        <div class="dashboard-options">
+            <!-- Space Passport Option -->
+            <div class="dashboard-option" onclick="navigateTo('space_passport_page.html')">
+                <img src="assets/Passportspace.png" alt="Space Passport Background">
+                <h3>Space Passport</h3>
+                <p>View and download your personalized space passport, including your chosen colony, planet, and team.</p>
+            </div>
+            <!-- Colony Exploration Option -->
+            <div class="dashboard-option" onclick="navigateTo('colony_exploration_page.html')">
+                <img src="assets/colonyexplore.png" alt="Colony Exploration Background">
+                <h3>Explore the Colony</h3>
+                <p>Take a virtual tour of the space colony and learn more about your role in building a sustainable community.</p>
+            </div>
+            <!-- Achievements and Badges Option -->
+            <div class="dashboard-option" onclick="navigateTo('achievements_badges_page.html')">
+                <img src="assets/achievementsbadges.png" alt="Achievements & Badges Background">
+                <h3>Achievements & Badges</h3>
+                <p>Track your progress and achievements, earn badges, and level up as you complete missions and activities.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مستعمرة الفضاء الافتراضية - الاختبار التفاعلي</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Interactive Quiz Page Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #1b263b;
+            color: #ffffff;
+            direction: rtl;
+        }
+        .quiz-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px;
+        }
+        .quiz-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .quiz-header h2 {
+            font-size: 2.5rem;
+        }
+        .question-box {
+            background-color: #243b55;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        .question-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .options button {
+            padding: 15px;
+            background-color: #e63946;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .options button:hover {
+            background-color: #d62839;
+        }
+    </style>
+</head>
+<body>
+    <!-- Interactive Quiz Page -->
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <h2>الاختبار التفاعلي</h2>
+            <p>اختبر معلوماتك حول مستعمرة الفضاء واكتشف المزيد عن الكون!</p>
+        </div>
+        <div class="question-box" id="questionBox">
+            <h3 id="questionText">ما هو أكبر كوكب في المجموعة الشمسية؟</h3>
+            <div class="options" id="optionsContainer">
+                <button onclick="checkAnswer('المشتري')">المشتري</button>
+                <button onclick="checkAnswer('زحل')">زحل</button>
+                <button onclick="checkAnswer('الأرض')">الأرض</button>
+                <button onclick="checkAnswer('المريخ')">المريخ</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function checkAnswer(selectedAnswer) {
+            const correctAnswer = 'المشتري';
+            if (selectedAnswer === correctAnswer) {
+                alert('إجابة صحيحة! المشتري هو أكبر كوكب في المجموعة الشمسية.');
+            } else {
+                alert('إجابة خاطئة. حاول مرة أخرى!');
+            }
+        }
+    </script>
+</body>
+</html>

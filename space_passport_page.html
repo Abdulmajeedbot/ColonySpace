@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مستعمرة الفضاء الافتراضية - جواز الفضاء</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Space Passport Page Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #1b263b;
+            color: #ffffff;
+            direction: rtl;
+        }
+        .passport-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px;
+        }
+        .passport-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .passport-header h2 {
+            font-size: 2.5rem;
+        }
+        .passport-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            max-width: 500px;
+        }
+        .passport-form select, .passport-form button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .passport-form button {
+            background-color: #e63946;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .passport-form button:hover {
+            background-color: #d62839;
+        }
+        .passport-result {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 1.2rem;
+            color: #b0bec5;
+        }
+    </style>
+</head>
+<body>
+    <!-- Space Passport Page -->
+    <div class="passport-container">
+        <div class="passport-header">
+            <h2>جواز الفضاء الخاص بك</h2>
+            <p>اختر المستعمرة والكوكب والفريق لإنشاء جواز الفضاء الشخصي الخاص بك.</p>
+        </div>
+        <form class="passport-form" id="passportForm">
+            <select id="colony" name="colony" required>
+                <option value="">اختر المستعمرة</option>
+                <option value="مستعمرة أ">مستعمرة أ</option>
+                <option value="مستعمرة ب">مستعمرة ب</option>
+                <option value="مستعمرة ج">مستعمرة ج</option>
+            </select>
+            <select id="planet" name="planet" required>
+                <option value="">اختر الكوكب</option>
+                <option value="المريخ">المريخ</option>
+                <option value="المشتري">المشتري</option>
+                <option value="الزهرة">الزهرة</option>
+            </select>
+            <select id="team" name="team" required>
+                <option value="">اختر الفريق</option>
+                <option value="المستكشفون">المستكشفون</option>
+                <option value="البناؤون">البناؤون</option>
+                <option value="العلماء">العلماء</option>
+            </select>
+            <button type="button" onclick="generatePassport()">إنشاء الجواز</button>
+        </form>
+        <div class="passport-result" id="passportResult"></div>
+    </div>
+
+    <script>
+        function generatePassport() {
+            const colony = document.getElementById('colony').value;
+            const planet = document.getElementById('planet').value;
+            const team = document.getElementById('team').value;
+            
+            if (colony && planet && team) {
+                const passportMessage = `تم تعيينك في فريق ${team} في ${colony} على كوكب ${planet}. تهانينا على بداية رحلتك!`;
+                document.getElementById('passportResult').textContent = passportMessage;
+            } else {
+                alert('يرجى اختيار جميع الخيارات لإنشاء جواز الفضاء الخاص بك.');
+            }
+        }
+    </script>
+</body>
+</html>
